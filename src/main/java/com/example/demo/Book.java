@@ -14,10 +14,13 @@ public class Book {
 
   int year;
 
-  public Book(String title, String author, int year) {
+  String userId;
+
+  public Book(String title, String author, int year , String userId) {
     this.title = title;
     this.author = author;
     this.year = year;
+    this.userId = userId;
   }
 
   public long getId() {
@@ -50,7 +53,14 @@ public class Book {
   public void setYear(int year) {
   	this.year=year;
   }
-  
+
+  public String getUserId() {
+    return userId;
+  }
+
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
 
   @Override
   public String toString() {

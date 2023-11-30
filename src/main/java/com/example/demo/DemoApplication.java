@@ -20,9 +20,9 @@ public class DemoApplication {
      SpringApplication.run(DemoApplication.class, args);
   }
 
-  @ShellMethod("Saves a book to Cloud Datastore: save-book <title> <author> <year>")
-  public String saveBook(String title, String author, int year) {
-     Book savedBook = this.bookRepository.save(new Book(title, author, year));
+  @ShellMethod("Saves a book to Cloud Datastore: save-book <title> <author> <year> <userid>")
+  public String saveBook(String title, String author, int year, String userId) {
+     Book savedBook = this.bookRepository.save(new Book(title, author, year, userId));
      return savedBook.toString();
   }
 
